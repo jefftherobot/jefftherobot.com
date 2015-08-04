@@ -4,7 +4,7 @@ var metalsmith   = require('metalsmith'),
     nunjucks     = require('nunjucks'),
     browserSync  = require('metalsmith-browser-sync'),
     markDown     = require('metalsmith-markdown'),
-    sass         = require('metalsmith-ruby-sass'),
+    sass         = require('metalsmith-sass'),
     templates    = require('metalsmith-layouts'),
     msIf         = require('metalsmith-if'),
     opts         = [],
@@ -12,7 +12,7 @@ var metalsmith   = require('metalsmith'),
 
     browserSyncTask = browserSync({
 			server : "build",
-			files  : ["src/contents/**/*.md", "src/templates/**/*"]
+			files  : ["src/contents/**/*", "src/templates/**/*"]
 		}),
 
     markDownTask = markDown(),
@@ -36,6 +36,7 @@ var metalsmith = metalsmith(__dirname)
     .clean(true)
     .use(templatesTask)
     .use(markDownTask)
+    .use(sassTask)
     .use(msIf(
       opts.watch,
       browserSyncTask
