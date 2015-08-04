@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Jefftherobot :: {{title}}</title>
+	</head>
+	<body class="page">
+		<header class="header">
+			{% include "partials/header.html" %}
+		</header>
+
+		<main>
+			<article class="content">
+				{% block content %}
+					<p>{{siteDescription}}</p>
+				{% endblock %}
+			</article>
+		</main>
+
+		<footer class="footer">
+			{% include "partials/footer.html" %}
+		</footer>
+	</body>
+</html>
