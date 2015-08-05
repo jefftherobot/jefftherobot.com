@@ -10,7 +10,7 @@ class Terminal {
 			prompt: 'guest@jefftherobot:~$ ',
 			onInit: function(term){
 				commands.motd(term)
-			}
+			},
 			greetings: function(cb){
 				cb(commands.greeting(true));
 			},
