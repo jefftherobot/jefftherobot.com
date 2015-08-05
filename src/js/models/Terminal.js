@@ -8,8 +8,11 @@ class Terminal {
 		this.elm.terminal(commands,{
 			name: 'main',
 			prompt: 'guest@jefftherobot:~$ ',
+			onInit: function(term){
+				commands.motd(term)
+			}
 			greetings: function(cb){
-				cb(commands.motd(true));
+				cb(commands.greeting(true));
 			},
 		});
 

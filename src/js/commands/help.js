@@ -1,3 +1,3 @@
 export default function help() {
-	this.echo('You asked for help')
+	this.echo('\nYou asked for help\n')
 }

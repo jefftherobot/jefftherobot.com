@@ -1,9 +1,11 @@
-export default function motd(initial=false) {
-	var message = 'A message of the day';
+export default function motd(term=this) {
+	var message;
 
-	if(initial){
-		return message+"\n";
-	}else{
-		this.echo(message+"\n")
-	}
+	term.pause();
+
+	$.getJSON('http://anyorigin.com/dev/get?url=http%3A//proverbs-app.antjan.us/random&callback=?', function(data){
+		message = data.contents;
+		term.resume();
+		term.echo('"'+message+'"\n');
+	});
 }
