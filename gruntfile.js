@@ -6,8 +6,8 @@ module.exports = function(grunt) {
 				files: ['src/js/**/*.js'],
 				tasks: ['babel']
 			},
-			html: {
-				files: ['src/**/*.html'],
+			copy: {
+				files: ['src/fonts/**/*'],
 				tasks: ['copy']
 			},
 			css: {
@@ -45,9 +45,9 @@ module.exports = function(grunt) {
 			main: {
 				files: [{
 					expand: true,
-					cwd: 'src',
-					src: '**/*.html',
-					dest: 'dist'
+					cwd: 'src/fonts',
+					src: '**/*',
+					dest: 'dist/fonts'
 				}]
 			}
 		},

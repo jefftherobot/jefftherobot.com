@@ -2,11 +2,20 @@
 
 	&.terminal--main {
 		height: 100%;
+		font-family: 'FixedsysExcelsior301Regular',  ;
+		font-size: 16px;
+		line-height: 15px;
 		background-color: transparent;
+		//text-shadow: rgba(137,211,253,.7) 0 -1px 35px;
 	}
 
 	.cmd {
+		font-family: 'FixedsysExcelsior301Regular', ;
+		font-size: 16px;
+		line-height: 15px;
 		background-color: transparent;
+
+		.prompt { line-height: 15px; }
 
 		.cursor.blink {
 			color: transparent;

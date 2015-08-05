@@ -1,9 +1,9 @@
 export default function motd(initial=false) {
-	var message = 'a message of the day';
+	var message = 'A message of the day';
 
 	if(initial){
-		return message;
+		return message+"\n";
 	}else{
-		this.echo(message)
+		this.echo(message+"\n")
 	}
 }
