@@ -1,0 +1,151 @@
+
+
+@mixin hide-text() {
+	$approximate-em-value: 12px / 1em;
+	$wider-than-any-screen: -9999em;
+	text-indent: $wider-than-any-screen * $approximate-em-value;
+	overflow: hidden;
+	text-align: left;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+	background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+@mixin box-shadow($left:0, $top:0, $blur:0, $size:0, $color:#ffffff, $inset: false) {
+	@if $inset {
+		-webkit-box-shadow:inset $left $top $blur $size $color;
+		-moz-box-shadow:inset $left $top $blur $size $color;
+		box-shadow:inset $left $top $blur $size $color;
+	} @else if $left == false {
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	} @else {
+		-webkit-box-shadow: $left $top $blur $size $color;
+		-moz-box-shadow: $left $top $blur $size $color;
+		box-shadow: $left $top $blur $size $color;
+	}
+}
+// @include box-shadow(1px,1px,1px,0, #fff, true);
+
+@mixin gradient($from, $to) {
+	background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+}
+
+/// Mixin printing a linear-gradient
+/// as well as a plain color fallback
+/// and the `-webkit-` prefixed declaration
+/// @access public
+/// @param {String | List | Angle} $direction - Linear gradient direction
+/// @param {Arglist} $color-stops - List of color-stops composing the gradient
+@mixin linear-gradient($direction, $color-stops...) {
+	@if is-direction($direction) == false {
+		$color-stops: ($direction, $color-stops);
+		$direction: 180deg;
+	}
+
+	background: nth(nth($color-stops, 1), 1);
+	background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+	background: linear-gradient($direction, $color-stops);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{nth(nth($color-stops, 1), 1)}', endColorstr='#{nth(nth($color-stops, length($color-stops)), 1)}');
+}
+
+//@include linear-gradient(#31B7D7, #EDAC7D);
+//@include linear-gradient(to right, #E47D7D 0%, #C195D3 50%, #4FB4E8 100%);
+//@include linear-gradient(42deg, #B58234 0%, #D2B545 50%, #D7C04D 50.01%, #FFFFFF 100%);
+
+@mixin fluid-image(){
+	max-width: 100%;
+	height: auto!important;
+}
+
+@mixin blank-list(){
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+@mixin rotate( $degrees ) {
+	-webkit-transform: rotate(#{$degrees}deg);
+	-moz-transform: rotate(#{$degrees}deg);
+	-ms-transform: rotate(#{$degrees}deg);
+	-o-transform: rotate(#{$degrees}deg);
+	transform: rotate(#{$degrees}deg);
+
+	filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+	zoom: 1;
+ }
+
+
+
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin list-reset(){
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+@mixin icon-size($s){
+	&:before {
+		font-size: $s;
+		line-height: $s;
+	}
+}
+
+@mixin visibility($size) {
+
+	@if $size == hidden-small {
+		display:none;
+
+		@include breakpoint(medium) {
+			display: block !important;
+		}
+
+		@include breakpoint(wide) {
+			display: block !important;
+ 	 }
+
+	} @else if $size == visible-small{
+
+		@include breakpoint(medium) {
+			display: none !important;
+		}
+
+		@include breakpoint(wide) {
+			display: none !important;
+		}
+	}@else if $size == hidden-medium{
+
+		@include breakpoint(medium) {
+			display: none !important;
+		}
+
+		@include breakpoint(wide) {
+			display: block !important;
+		}
+
+	}@else if $size == visible-wide{
+		display:none;
+
+		@include breakpoint(medium) {
+			display: none !important;
+		}
+
+		@include breakpoint(wide) {
+			display: block !important;
+		}
+
+	}
+}

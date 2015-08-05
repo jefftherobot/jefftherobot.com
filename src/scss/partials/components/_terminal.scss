@@ -1,0 +1,74 @@
+.terminal {
+
+	&.terminal--main {
+		height: 100%;
+		background-color: transparent;
+	}
+
+	.cmd {
+		background-color: transparent;
+
+		.cursor.blink {
+			color: transparent;
+			 -webkit-animation: blink2 1s infinite steps(1, start);
+       -moz-animation: blink2 1s infinite steps(1, start);
+        -ms-animation: blink2 1s infinite steps(1, start);
+            animation: blink2 1s infinite steps(1, start);
+		}
+
+	}
+	.prompt, .command {
+		//color: #0c0;
+		//text-shadow: 0 0 3px rgba(0,100,0,50);
+		}
+
+	/* .cursor {
+		background: #0c0;
+		animation: blink 1s linear infinite;
+		-webkit-animation: blink 1s infinite linear;
+		-ms-animation: blink 1s infinite linear;
+		-moz-animation: blink 1s infinite linear;
+
+	} */
+}
+
+@keyframes blink2 {
+  0%, 100% {
+        background-color: transparent;
+        color: #aaa;
+  }
+  50% {
+        background-color: #bbb; /* not #aaa because it's seem there is Google Chrome bug */
+        color: transparent;
+  }
+}
+@-webkit-keyframes blink2 {
+  0%, 100% {
+        background-color: transparent;
+        color: #aaa;
+  }
+  50% {
+        background-color: #bbb;
+        color: transparent;
+  }
+}
+@-ms-keyframes blink2 {
+  0%, 100% {
+        background-color: transparent;
+        color: #aaa;
+  }
+  50% {
+        background-color: #bbb;
+        color: transparent;
+  }
+}
+@-moz-keyframes blink2 {
+  0%, 100% {
+        background-color: transparent;
+        color: #aaa;
+  }
+  50% {
+        background-color: #bbb;
+        color: transparent;
+  }
+}

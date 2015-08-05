@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="dist/css/main.css">
+	</head>
+	<body>
+
+		<main>
+			<div class="terminal terminal--main">
+
+			</div>
+		</main>
+
+		<script src="jspm_packages/system.js"></script>
+		<script src="config.js"></script>
+		<script>
+		 System.config({
+			 "paths": {
+				 "*": "dist/js/*.js"
+			 }
+		 });
+	 </script>
+		<script>
+			System.import('main');
+		</script>
+	</body>
+</html>
