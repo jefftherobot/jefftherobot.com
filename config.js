@@ -21,6 +21,7 @@ System.config({
     "css": "github:systemjs/plugin-css@0.1.13",
     "jquery": "github:components/jquery@2.1.4",
     "jquery.terminal": "github:jcubic/jquery.terminal@0.8.8",
+    "screenfull": "github:sindresorhus/screenfull.js@2.0.0",
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
     },
