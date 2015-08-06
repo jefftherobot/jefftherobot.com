@@ -18,6 +18,10 @@ export default function greeting(initial=false) {
     ].join('\n');
 */
 
+//http://sixteencolors.net/pack/rmrs-50/asx-ipa.nfo
+//https://github.com/ansilove/ansilove.js
+//http://256.io/escapes.js/
+
 var signature = ['jefftherobot(R) Version 0.1 Alpha', '   (C)Copyright 1983 - 2015.', '\n',
         '                     °ÜÜÜÜÜ²ÛÛÛÛ ±²ÛÛ²²ÜÜÜ°                      ',
         '                 °Ü²ÛÛÛÛ²ßßßßßß  °ßßßßßÛÛÛÛ²Ü                    ',
@@ -65,10 +69,11 @@ var signature = ['jefftherobot(R) Version 0.1 Alpha', '   (C)Copyright 1983 - 20
 		].join('\n');
 
 
-
 	if(initial){
+       // return $.terminal.from_ansi('[[b;#00DE12;]hello]');
 		return signature + '\n';
 	}else{
+
 		this.echo(signature + '\n')
 	}
 }
