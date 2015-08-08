@@ -8,6 +8,7 @@ install:
   - jspm install
   - gem install sass
   - gem install sass-globbing -v 1.1.0
+  - gem install --pre sass-css-importer
 script:
   - grunt build
   - jspm bundle-sfx src/js/main build/js/jefftherobot.bundle.js --skip-source-maps --minify
