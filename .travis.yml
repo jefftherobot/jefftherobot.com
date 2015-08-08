@@ -1,3 +1,4 @@
+sudo: required
 language: node_js
 before_install: 
   - npm install -g grunt-cli
@@ -13,5 +14,5 @@ script:
   - grunt build
   - jspm bundle-sfx src/js/main build/js/jefftherobot.bundle.js --skip-source-maps --minify
 after_success:
-  - apt-get -y install sshpass
+  - sudo apt-get -y install sshpass
   - sshpass -p $DEPLOY_PASS scp -r build $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
