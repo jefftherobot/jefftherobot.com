@@ -13,4 +13,4 @@ script:
   - grunt build
   - jspm bundle-sfx src/js/main build/js/jefftherobot.bundle.js --skip-source-maps --minify
 after_success:
-  "find build -type f -exec curl -u $FTP_USER:$FTP_PASSWORD --ftp-create-dirs -T {} ftp://jefftherobot.com/usr/local/www/data/jefftherobot.com/htdocs/{} \;"
+  - find build -type f -exec curl -u $FTP_USER:$FTP_PASSWORD --ftp-create-dirs -T {} ftp://jefftherobot.com/usr/local/www/data/jefftherobot.com/htdocs/{} \;
