@@ -14,5 +14,4 @@ script:
   - grunt build
   - jspm bundle-sfx src/js/main build/js/jefftherobot.bundle.js --skip-source-maps --minify
 after_success:
-  - sudo apt-get -y install sshpass
-  - sshpass -p $DEPLOY_PASS scp -o stricthostkeychecking=no -r build $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+  - find build -type f -exec curl -u $FTP_USER:$FTP_PASSWORD --ftp-create-dirs -T {} ftp://jefftherobot.com/usr/local/www/data/jefftherobot.com/htdocs/{} \;
