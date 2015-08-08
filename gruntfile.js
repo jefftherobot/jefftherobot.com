@@ -33,21 +33,38 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				options: {
-					style: 'compressed',
+					style: 'expanded',
 					require: ['sass-globbing', 'sass-css-importer']
 				},
 				files: {
 					'dist/css/main.css': 'src/scss/main.scss'
 				}
-			}
+			},
+			build: {
+				options: {
+					style: 'compressed',
+					sourcemap: 'none',
+					require: ['sass-globbing', 'sass-css-importer']
+				},
+				files: {
+					'build/css/main.css': 'src/scss/main.scss'
+				}
+			},
 		},
 		copy: {
-			main: {
+			fonts: {
 				files: [{
 					expand: true,
 					cwd: 'src/fonts',
 					src: '**/*',
 					dest: 'dist/fonts'
+				}]
+			},
+			build: {
+				files: [{
+					expand: true,
+					src: ['fonts/**/*', 'images/**/*'],
+					dest: 'build/'
 				}]
 			}
 		},
@@ -74,4 +91,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-browser-sync');
 
 	grunt.registerTask('default', ['browserSync', 'watch']);
+	grunt.registerTask('build', ['sass:build', 'copy:build']);
 }
