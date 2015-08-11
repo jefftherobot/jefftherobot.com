@@ -24,7 +24,7 @@ export default function greeting(initial=false) {
 
 var lastLoginInfo = ['Last login:',getLastLoginTime()].join(' ');
 
-var signature = ['Jeff OS(R) Version 0.1 Alpha', '   (C)Copyright 1983 - 2015 jefftherobot.','\n', lastLoginInfo, '\n',
+var signature = [lastLoginInfo,'\nJeff OS(R) Version 0.1 Alpha', '   (C)Copyright 1983 - 2015 jefftherobot.', '\n',
 				'                     °ÜÜÜÜÜ²ÛÛÛÛ ±²ÛÛ²²ÜÜÜ°                      ',
 				'                 °Ü²ÛÛÛÛ²ßßßßßß  °ßßßßßÛÛÛÛ²Ü                    ',
 				'               °²ÛÛÛß±ÜÜÜÛÛÛÛÛÛÛÛÛÛÛÛÛÛÜÜÜ²ß²Û                   ',
