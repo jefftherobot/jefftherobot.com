@@ -1,3 +1,7 @@
+import 'jquery.storageapi';
+
+var storage=$.localStorage;
+
 export default function greeting(initial=false) {
 
 /*var message =
@@ -22,9 +26,8 @@ export default function greeting(initial=false) {
 //https://github.com/ansilove/ansilove.js
 //http://256.io/escapes.js/
 
-var lastLoginInfo = ['Last login:',getLastLoginTime()].join(' ');
-
-var signature = [lastLoginInfo,'\nJeff OS(R) Version 0.1 Alpha', '   (C)Copyright 1983 - 2015 jefftherobot.', '\n',
+var lastLoginInfo = ['Last login:',getLastLoginTime()].join(' '),
+    signature = [lastLoginInfo,'\nJeff OS(R) Version 0.1 Alpha', '   (C)Copyright 1983 - 2015 jefftherobot.', '\n',
 				'                     °ÜÜÜÜÜ²ÛÛÛÛ ±²ÛÛ²²ÜÜÜ°                      ',
 				'                 °Ü²ÛÛÛÛ²ßßßßßß  °ßßßßßÛÛÛÛ²Ü                    ',
 				'               °²ÛÛÛß±ÜÜÜÛÛÛÛÛÛÛÛÛÛÛÛÛÛÜÜÜ²ß²Û                   ',
@@ -70,13 +73,8 @@ var signature = [lastLoginInfo,'\nJeff OS(R) Version 0.1 Alpha', '   (C)Copyrigh
 				'            ßßß                                  ßßß             '
 		].join('\n');
 
-
-	//console.log(getLastLoginTime())
-	getIPdetails()
-
-		if(initial){
+if(initial){
 		// return $.terminal.from_ansi('[[b;#00DE12;]hello]');
-
 		return signature + '\n';
 	}else{
 		this.echo(signature + '\n')
@@ -84,17 +82,13 @@ var signature = [lastLoginInfo,'\nJeff OS(R) Version 0.1 Alpha', '   (C)Copyrigh
 }
 
 var getLastLoginTime = function (){
-	var lastLoginTime = window.localStorage.lastLoginTime || new Date().getTime();
-	var lastLoginLocation = window.localStorage.ipDetails;
 
-	if(lastLoginLocation){
-		lastLoginLocation =	' from ' + JSON.parse(lastLoginLocation).address;
-	}else{
-		lastLoginLocation ='';
-	}
+	var lastLoginTime = storage.isSet('lastLoginTime') ? storage.get('lastLoginTime') : new Date().getTime(),
+	    lastLoginLocation = storage.isSet('ipDetails') ? ' from ' + storage.get('ipDetails').address : '';
 
 	//set new last login info
-	window.localStorage.lastLoginTime = new Date().getTime();
+	storage.set('lastLoginTime', new Date().getTime());
+
 	getIPdetails();
 
 	return new Date(parseInt(lastLoginTime)) + lastLoginLocation;
