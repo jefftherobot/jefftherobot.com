@@ -3,9 +3,10 @@ import commands from '../commands/commands';
 
 class Terminal {
 	constructor (opts) {
+		var self = this;
 		this.elm = opts.elm;
 
-		this.elm.terminal(commands,{
+		self.terminal = this.elm.terminal(commands,{
 			name: 'main',
 			prompt: 'guest@jefftherobot:~$ ',
 			onInit: function(term){
@@ -15,6 +16,16 @@ class Terminal {
 				cb(commands.greeting(true));
 			},
 		});
+
+		(function loop() {
+			var rand = Math.round(Math.random() * (60000 - 30000)) + 30000;
+
+			setTimeout(function() {
+				self.terminal.exec('glitch', true)
+				loop();
+				}, rand);
+		}());
+
 
 		return this;
 	}

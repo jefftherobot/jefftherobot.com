@@ -19,6 +19,8 @@ System.config({
     "clean-css": "npm:clean-css@3.3.8",
     "core-js": "npm:core-js@0.9.18",
     "css": "github:systemjs/plugin-css@0.1.13",
+    "glitch": "github:sjhewitt/glitch.js@master",
+    "html2canvas": "github:niklasvh/html2canvas@0.4.1",
     "jquery": "github:components/jquery@2.1.4",
     "jquery.storageapi": "github:julien-maurel/jQuery-Storage-API@1.7.4",
     "jquery.terminal": "github:jcubic/jquery.terminal@0.8.8",
