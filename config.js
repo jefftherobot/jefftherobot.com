@@ -20,6 +20,7 @@ System.config({
     "core-js": "npm:core-js@0.9.18",
     "css": "github:systemjs/plugin-css@0.1.13",
     "jquery": "github:components/jquery@2.1.4",
+    "jquery.storageapi": "github:julien-maurel/jQuery-Storage-API@1.7.4",
     "jquery.terminal": "github:jcubic/jquery.terminal@0.8.8",
     "kendo-ui": "github:kendo-labs/bower-kendo-ui@2015.2.803",
     "screenfull": "github:sindresorhus/screenfull.js@2.0.0",
