@@ -5,7 +5,7 @@ import 'kendo-ui/styles/kendo.common.min.css!';
 //http://docs.telerik.com/kendo-ui/web/window/overview
 //http://docs.telerik.com/kendo-ui/api/javascript/ui/window
 
-export default function open(what) {
+export default function dialog(what) {
 	$('body').append('<div class="dialog">'+what+'</div>');
 
 		var dialog = $(".dialog").kendoWindow({
@@ -16,6 +16,6 @@ export default function open(what) {
 			width: 400,
 			minWidth: 400,
 			minHeight: 90,
-			title: 'Application',
+			title: '16 bit MS-DOS Subsystem',
 		}).data("kendoWindow").center().restore();
 }

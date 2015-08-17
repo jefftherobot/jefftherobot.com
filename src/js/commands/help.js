@@ -3,7 +3,7 @@ export default function help() {
 var message = [
 
 	'Welcome to [[;#AB4642;]Jeff OS (JOS)]!',
-	'This is a UNIX - like simulated terminal.',
+	'This is a UNIX - like simulated terminal with little but of MS-DOS and Windows 98 mixed in for fun.',
 	'\r',
 	'SOME COMMANDS',
 	'    [[;#A1B56C;]help].....................Shows this menu',
