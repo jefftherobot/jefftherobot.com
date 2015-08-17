@@ -14,14 +14,15 @@ class Terminal {
 			},
 			greetings: function(cb){
 				cb(commands.greeting(true));
-			},
+			}
 		});
-
 		(function loop() {
 			var rand = Math.round(Math.random() * (60000 - 30000)) + 30000;
 
 			setTimeout(function() {
-				self.terminal.exec('glitch', true)
+				self.terminal.history().disable();
+				self.terminal.exec('glitch', true);
+				self.terminal.history().enable();
 				loop();
 				}, rand);
 		}());
