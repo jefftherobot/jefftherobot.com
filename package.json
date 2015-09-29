@@ -4,17 +4,16 @@
   "description": "my site",
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-babel": "^5.0.0",
+    "grunt-babel": "*",
     "grunt-browser-sync": "^2.1.1",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-sass": "^0.9.2",
     "grunt-contrib-watch": "^0.6.1",
-    "jspm": "^0.15.7",
+    "jspm": "*",
     "jspm-bower-endpoint": "^0.3.2"
   },
   "jspm": {
-    "directories": {},
     "dependencies": {
       "clean-css": "npm:clean-css@^3.3.8",
       "css": "github:systemjs/plugin-css@^0.1.13",
@@ -27,19 +26,11 @@
       "screenfull": "github:sindresorhus/screenfull.js@^2.0.0"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.1.13",
-      "babel-runtime": "npm:babel-runtime@^5.1.13",
-      "core-js": "npm:core-js@^0.9.4"
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
     },
     "overrides": {
-      "github:twbs/bootstrap@3.3.5": {
-        "main": "js/bootstrap",
-        "shim": {
-          "js/bootstrap": [
-            "jquery"
-          ]
-        }
-      },
       "github:jcubic/jquery.terminal@0.8.8": {
         "registry": "jspm",
         "main": "js/jquery.terminal-min",
