@@ -2,70 +2,40 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		watch: {
-			scripts: {
-				files: ['src/js/**/*.js'],
-				tasks: ['babel']
-			},
-			copy: {
-				files: ['src/fonts/**/*'],
-				tasks: ['copy']
-			},
 			css: {
 				files: ['src/scss/**/*.scss'],
 				tasks: ['sass']
 			}
 		},
-		babel: {
-			options: {
-				sourceMap: true,
-				modules: 'system',
-				stage:2
-			},
-			dist: {
-				files: [{
-					expand: true,
-					cwd: 'src/js',
-					src: '**/*.js',
-					dest: 'dist/js'
-				}]
-			}
-		},
 		sass: {
 			dist: {
 				options: {
-					style: 'expanded',
+					style: 'compressed',
 					require: ['sass-globbing', 'sass-css-importer']
 				},
 				files: {
 					'dist/css/main.css': 'src/scss/main.scss'
 				}
+			}
+		},
+		processhtml: {
+			options: {
+				data: {}
 			},
-			build: {
-				options: {
-					style: 'compressed',
-					sourcemap: 'none',
-					require: ['sass-globbing', 'sass-css-importer']
-				},
+			dev: {
 				files: {
-					'build/css/main.css': 'src/scss/main.scss'
+					'index.html': ['src/index.html']
 				}
 			},
+			dist: {
+				files: {
+					'index.html': ['src/index.html']
+				}
+			}
 		},
-		copy: {
-			fonts: {
-				files: [{
-					expand: true,
-					cwd: 'src/fonts',
-					src: '**/*',
-					dest: 'dist/fonts'
-				}]
-			},
-			build: {
-				files: [{
-					expand: true,
-					src: ['fonts/**/*', 'images/**/*'],
-					dest: 'build/'
-				}]
+		shell: {
+			buildJs: {
+				command: 'jspm bundle-sfx src/js/main dist/js/jefftherobot.bundle.js'
 			}
 		},
 		browserSync: {
@@ -73,6 +43,7 @@ module.exports = function(grunt) {
 				bsFiles: {
 					src : [
 						'dist/**/*',
+						'src/js/**/*',
 						'!dist/**/*.map'
 					]
 				},
@@ -84,12 +55,8 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-babel');
-	grunt.loadNpmTasks('grunt-browser-sync');
+	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-	grunt.registerTask('default', ['browserSync', 'watch']);
-	grunt.registerTask('build', ['sass:build', 'copy:build']);
+	grunt.registerTask('default', ['processhtml:dev', 'browserSync', 'watch']);
+	grunt.registerTask('build', ['processhtml:dist', 'shell:buildJs']);
 }
