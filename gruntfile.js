@@ -42,9 +42,10 @@ module.exports = function(grunt) {
 			dev: {
 				bsFiles: {
 					src : [
-						'dist/**/*',
-						'src/js/**/*',
-						'!dist/**/*.map'
+						'index.html',
+						'dist/css/*',
+						'!dist/css/*.map',
+						'src/js/**/*'
 					]
 				},
 				options: {
@@ -58,5 +59,5 @@ module.exports = function(grunt) {
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	grunt.registerTask('default', ['processhtml:dev', 'browserSync', 'watch']);
-	grunt.registerTask('build', ['processhtml:dist', 'shell:buildJs']);
+	grunt.registerTask('build', ['shell:buildJs','processhtml:dist']);
 }
