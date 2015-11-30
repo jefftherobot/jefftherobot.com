@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 		},
 		shell: {
 			buildJs: {
-				command: 'jspm bundle-sfx src/js/main dist/js/jefftherobot.bundle.js'
+				command: 'jspm bundle-sfx src/js/main dist/js/jefftherobot.bundle.js --skip-source-maps --minify'
 			}
 		},
 		browserSync: {
