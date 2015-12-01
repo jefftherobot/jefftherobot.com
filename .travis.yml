@@ -1,6 +1,6 @@
 sudo: required
 language: node_js
-before_install: 
+before_install:
   - npm install -g grunt-cli
   - npm install -g jspm
   - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
@@ -12,7 +12,5 @@ install:
   - gem install --pre sass-css-importer
 script:
   - grunt build
-  - jspm bundle-sfx src/js/main build/js/jefftherobot.bundle.js --skip-source-maps --minify
 after_success:
-  - cd build
-  - find * -type f -exec curl -u $FTP_USER:$FTP_PASSWORD --ftp-create-dirs -T {} ftp://$FTP_HOST$FTP_PATH{} \;
+  - find index.html dist assets -type f -exec curl -u $FTP_USER:$FTP_PASSWORD --ftp-create-dirs -T {} ftp://$FTP_HOST$FTP_PATH{} \;
