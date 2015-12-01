@@ -59,5 +59,6 @@ module.exports = function(grunt) {
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	grunt.registerTask('default', ['processhtml:dev', 'browserSync', 'watch']);
-	grunt.registerTask('build', ['shell:buildJs','processhtml:dist']);
+	grunt.registerTask('build', ['sass:dist','shell:buildJs','processhtml:dist']);
+	grunt.registerTask('preview', ['browserSync', 'watch']);
 }
