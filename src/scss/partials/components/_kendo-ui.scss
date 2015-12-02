@@ -6,7 +6,7 @@
 .k-window {
 	font-family: Tahoma, Verdana;
 	font-size: 13px;
-	background: #c0c0c0 url(/images/resize.png) no-repeat bottom right;;
+	background: #c0c0c0 url(/assets/images/resize.png) no-repeat bottom right;;
 	border: 1px solid;
 	border-top-color: #dfdfdf;
 	border-left-color: #dfdfdf;
@@ -85,18 +85,18 @@
 	}
 
 	& .k-i-maximize {
-		background: url(/images/maximize.png) no-repeat 2px 2px;
+		background: url(/assets/images/maximize.png) no-repeat 2px 2px;
 		background-size: 10px;
 	}
 
 
 	& .k-i-minimize {
-		background: url(/images/minimize.png) no-repeat 2px 9px;
+		background: url(/assets/images/minimize.png) no-repeat 2px 9px;
 		background-size: 8px;
 	}
 
 	& .k-i-close {
-		background: url(/images/close.png) no-repeat 3px 3px;
+		background: url(/assets/images/close.png) no-repeat 3px 3px;
 		background-size: 8px;
 	}
 }

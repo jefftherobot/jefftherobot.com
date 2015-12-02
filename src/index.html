@@ -1,6 +1,7 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
+		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="dist/css/main.css">
 	</head>
 	<body>
@@ -11,18 +12,24 @@
 
 
 
+		<!-- build:template
+		<% if (environment === 'dev') { %>
 		<script src="jspm_packages/system.js"></script>
 		<script src="config.js"></script>
 		<script>
-		System.config({
-		"paths": {
-		"*": "src/js/*.js"
-		}
-		});
+			System.config({
+			 "paths": {
+				 "*": "src/js/*.js"
+			 }
+			});
 		</script>
 		<script>
-		System.import('main');
+			System.import('main');
 		</script>
+		<% } else { %>
+		<script src="dist/js/jefftherobot.bundle.js"></script>
+		<% } %>
+		/build -->
 
 	</body>
 </html>
