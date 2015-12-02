@@ -1,4 +1,5 @@
 $screen-background:#121010;
+$scanLineWidth: 1px;
 
 main {
 		// flicker
@@ -26,14 +27,22 @@ main {
 		left:0;
 		bottom:0;
 		right:0;
-		background:
+		  /* background: -webkit-repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent $scanLineWidth,
+    rgba(0,0,0,0.25) $scanLineWidth,
+    rgba(0,0,0,0.25) $scanLineWidth*2
+  );
+  -webkit-background-size: 100% $scanLineWidth*2; */
+		 background:
 			linear-gradient(transparentize($screen-background,1) 50%,
 			transparentize(darken($screen-background,10),0.9) 50%),
  			linear-gradient(90deg,transparentize(#ff0000,0.94),
 			transparentize(#00ff00,0.98),
 			transparentize(#0000ff,0.94));
 		z-index:2;
-		background-size:
+		 background-size:
 			100% 2px,
 			3px 100%;
 		pointer-events:none;
