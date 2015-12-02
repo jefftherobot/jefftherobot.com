@@ -13,14 +13,14 @@ export default function dialog(what) {
 
 	$('body').append('<div class="dialog">'+data.content+'</div>');
 
-		var dialog = $(".dialog").kendoWindow({
-			actions: ["Minimize", "Maximize", "Close"],
-			animation: false,
-			navigatable : false,
-			height: 90,
-			width: 400,
-			minWidth: 400,
-			minHeight: 90,
-			title: data.title || '16 bit MS-DOS Subsystem',
-		}).data("kendoWindow").center().restore();
+	var dialog = $(".dialog").kendoWindow({
+		actions: ["Minimize", "Maximize", "Close"],
+		animation: false,
+		navigatable : false,
+		height: 90,
+		width: 400,
+		minWidth: 400,
+		minHeight: 90,
+		title: data.title || '16 bit MS-DOS Subsystem',
+	}).data("kendoWindow").center().restore();
 }
