@@ -16,6 +16,7 @@ class Terminal {
 				cb(commands.greeting(true));
 			}
 		});
+
 		(function loop() {
 			var rand = Math.round(Math.random() * (60000 - 30000)) + 30000;
 

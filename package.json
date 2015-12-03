@@ -23,6 +23,7 @@
       "jquery.storageapi": "github:julien-maurel/jQuery-Storage-API@^1.7.4",
       "jquery.terminal": "github:jcubic/jquery.terminal@^0.8.8",
       "kendo-ui": "github:kendo-labs/bower-kendo-ui@^2015.2.803",
+      "responsiveVoice": "github:ResponsiveVoice/ResponsiveVoice@master",
       "screenfull": "github:sindresorhus/screenfull.js@^2.0.0"
     },
     "devDependencies": {
@@ -42,6 +43,10 @@
             ]
           }
         }
+      },
+      "github:ResponsiveVoice/ResponsiveVoice@master": {
+        "registry": "jspm",
+        "main": "responsivevoice.src"
       }
     }
   }

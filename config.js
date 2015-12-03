@@ -23,6 +23,7 @@ System.config({
     "jquery.storageapi": "github:julien-maurel/jQuery-Storage-API@1.7.5",
     "jquery.terminal": "github:jcubic/jquery.terminal@0.8.8",
     "kendo-ui": "github:kendo-labs/bower-kendo-ui@2015.3.1201",
+    "responsiveVoice": "github:ResponsiveVoice/ResponsiveVoice@master",
     "screenfull": "github:sindresorhus/screenfull.js@2.0.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
