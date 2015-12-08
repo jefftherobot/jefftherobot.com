@@ -1,8 +1,14 @@
-import voice from 'responsiveVoice';
+//import voice from 'responsiveVoice';
 
 export default function talk(what) {
-	var person = "US English Female"; //http://responsivevoice.org/text-to-speech-languages/
 
-	voice.responsiveVoice.setDefaultVoice(person);
-	voice.responsiveVoice.speak(what)
+	var api_url = "https://zara-speech.mybluemix.net/api/synthesize",
+	    voice   = "en-US_LisaVoice";
+
+	var downloadURL = api_url +
+	    '?voice=' + voice +
+	    '&text=' + encodeURIComponent(what)
+
+	var audio = new Audio(downloadURL);
+	audio.play();
 }
