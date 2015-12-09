@@ -3,7 +3,7 @@
 export default function talk(what) {
 
 	var api_url = "https://zara-speech.mybluemix.net/api/synthesize",
-	    voice   = "en-US_AllisonVoice";
+	    voice   = "en-GB_KateVoice";
 
 	var downloadURL = api_url +
 	    '?voice=' + voice +
