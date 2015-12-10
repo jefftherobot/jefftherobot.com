@@ -5,6 +5,7 @@ import fullscreen from './fullscreen';
 import dialog from './dialog';
 import glitch from './glitch';
 import talk from './talk';
+import zara from './zara';
 
 export default {
 	greeting: greeting,
@@ -14,4 +15,5 @@ export default {
 	glitch: glitch,
 	help: help,
 	talk: talk,
+	zara: zara
 }
