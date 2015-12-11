@@ -7,18 +7,12 @@ export default function zara() {
 		var response = 'Zara is coming soon...Here is what you said... '+request
 
 		//getResponse(request)
-
 		talk(response);
-		term.echo(response);
 	}, {
 	name: 'zara',
 	prompt: 'zara> '});
 }
 
-function getResponse(whatinput){
+function getResponse(whatinput){}
 
-}
-
-function parseResponse(){
-
-}
+function parseResponse(){}

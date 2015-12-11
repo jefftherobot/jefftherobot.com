@@ -1,5 +1,6 @@
 import terminal from 'jquery.terminal';
 import commands from '../commands/commands';
+import glitch from '../commands/glitch';
 
 class Terminal {
 	constructor (opts) {
@@ -21,9 +22,7 @@ class Terminal {
 			var rand = Math.round(Math.random() * (60000 - 30000)) + 30000;
 
 			setTimeout(function() {
-				self.terminal.history().disable();
-				self.terminal.exec('glitch', true);
-				self.terminal.history().enable();
+				glitch()
 				loop();
 				}, rand);
 		}());
