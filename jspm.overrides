@@ -1,1 +1,0 @@
-jspm install -y jquery.terminal=github:jcubic/jquery.terminal -o "{ 'registry': 'jspm', 'main': 'js/jquery.terminal-min', 'shim': { 'js/jquery.terminal-min': { 'deps': ['jquery', '../css/jquery.terminal.css!'] } } }"
