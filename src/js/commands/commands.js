@@ -6,6 +6,7 @@ import dialog from './dialog';
 import glitch from './glitch';
 import talk from './talk';
 import zara from './zara';
+import ls from './ls';
 
 export default {
 	greeting: greeting,
@@ -15,5 +16,6 @@ export default {
 	glitch: glitch,
 	help: help,
 	talk: talk,
-	zara: zara
+	zara: zara,
+	ls: ls
 }
