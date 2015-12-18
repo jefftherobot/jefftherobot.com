@@ -16,5 +16,6 @@ export default function dialog(data) {
 		minWidth: 400,
 		minHeight: 90,
 		title: data.title || '16 bit MS-DOS Subsystem',
+		close: function(e){ dialog.destroy(); }
 	}).data("kendoWindow").center().restore();
 }
