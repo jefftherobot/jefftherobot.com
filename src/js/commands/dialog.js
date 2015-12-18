@@ -5,9 +5,9 @@ import 'kendo-ui/styles/kendo.common.min.css!';
 //http://docs.telerik.com/kendo-ui/web/window/overview
 //http://docs.telerik.com/kendo-ui/api/javascript/ui/window
 
-export default function dialog(what) {
+export default function dialog(data) {
 	//  dialog '{ "content": "An application attempted to directly access the hard disk, which cannot be supported", "title": "test" }'
-	var data = $.parseJSON(what);
+	//var data = $.parseJSON(what);
 
 	//console.log('title: '+data.title);
 
