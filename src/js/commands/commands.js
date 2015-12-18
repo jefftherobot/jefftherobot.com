@@ -7,6 +7,8 @@ import glitch from './glitch';
 import talk from './talk';
 import zara from './zara';
 import ls from './ls';
+import cd from './cd';
+import cat from './cat';
 
 export default {
 	greeting: greeting,
@@ -17,5 +19,7 @@ export default {
 	help: help,
 	talk: talk,
 	zara: zara,
-	ls: ls
+	ls: ls,
+	cd: cd,
+	cat: cat
 }
