@@ -15,7 +15,7 @@ export default function cat(file) {
 	term.pause();
 
 	$.getJSON(api + dir +'/' + file + '?ref=filesystem', function(data, textStatus, jqXHR){
-		console.log(data)
+		//console.log(data)
 		var content = data.content.trim();
 		if(data.encoding == 'base64'){
 			content = atob(content);
@@ -34,7 +34,8 @@ export default function cat(file) {
 		term.resume();
 
 	}).fail(function(data, textStatus, jqXHR){
-		_.error("cat: " + file + ": No such file or directory");
+		term.resume();
+		term.error("cat: " + file + ": No such file or directory");
 	});
 }
 
