@@ -123,8 +123,8 @@ body,
   height: 100%;
 }
 body {
-  background: #eee;
-  font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background: #f8f2e3;
+  font: 14px 'Special Elite';
   -webkit-text-size-adjust: 100%;
 }
 .outer {
@@ -174,7 +174,7 @@ body {
   -ms-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
   z-index: 1;
-  background: #eee;
+  background: #f8f2e3;
 }
 .mobile-nav-on #wrap {
   left: 280px;
@@ -185,6 +185,7 @@ body {
     float: left;
     width: 73.33333333333333%;
     margin: 0 0.833333333333333%;
+    width: auto;
   }
 }
 .article-date,
@@ -203,11 +204,7 @@ body {
 }
 .article-inner,
 .archive-article-inner {
-  background: #fff;
-  -webkit-box-shadow: 1px 2px 3px #ddd;
-  box-shadow: 1px 2px 3px #ddd;
-  border: 1px solid #ddd;
-  border-radius: 3px;
+  border-bottom: 1px solid #cec9b9;
 }
 .article-entry h1,
 .widget h1 {
@@ -236,7 +233,7 @@ body {
 }
 .article-entry hr,
 .widget hr {
-  border: 1px dashed #ddd;
+  border: 1px dashed #cec9b9;
 }
 .article-entry strong,
 .widget strong {
@@ -310,7 +307,7 @@ body {
 #header {
   height: 300px;
   position: relative;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #cec9b9;
 }
 #header:before,
 #header:after {
@@ -480,9 +477,9 @@ body {
 .search-form-input {
   border: none;
   background: none;
-  color: #555;
+  color: #242424;
   width: 100%;
-  font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font: 13px 'Special Elite';
   outline: none;
 }
 .search-form-input::-webkit-search-results-decoration,
@@ -505,7 +502,7 @@ body {
   color: #777;
 }
 .article {
-  margin: 50px 0;
+  margin: 30px 0;
 }
 .article-inner {
   overflow: hidden;
@@ -541,7 +538,7 @@ body {
   text-decoration: none;
   font-size: 2em;
   font-weight: bold;
-  color: #555;
+  color: #242424;
   line-height: 1.1em;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
@@ -552,8 +549,8 @@ a.article-title:hover {
   color: #258fb8;
 }
 .article-entry {
-  color: #555;
-  padding: 0 20px;
+  color: #242424;
+  padding: 0;
 }
 .article-entry:before,
 .article-entry:after {
@@ -566,7 +563,8 @@ a.article-title:hover {
 .article-entry p,
 .article-entry table {
   line-height: 1.6em;
-  margin: 1.6em 0;
+  font-size: 17px;
+  margin: 0 0 10px;
 }
 .article-entry h1,
 .article-entry h2,
@@ -615,15 +613,15 @@ a.article-title:hover {
 }
 .article-entry th {
   font-weight: bold;
-  border-bottom: 3px solid #ddd;
+  border-bottom: 3px solid #cec9b9;
   padding-bottom: 0.5em;
 }
 .article-entry td {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #cec9b9;
   padding: 10px 0;
 }
 .article-entry blockquote {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: 'Special Elite';
   font-size: 1.4em;
   margin: 1.6em 20px;
   text-align: center;
@@ -631,7 +629,7 @@ a.article-title:hover {
 .article-entry blockquote footer {
   font-size: 14px;
   margin: 1.6em 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Special Elite';
 }
 .article-entry blockquote footer cite:before {
   content: "—";
@@ -679,7 +677,7 @@ a.article-title:hover {
   line-height: 1em;
   padding: 6px 15px;
   border-radius: 15px;
-  background: #eee;
+  background: #f8f2e3;
   color: #999;
   text-shadow: 0 1px #fff;
   text-decoration: none;
@@ -693,7 +691,7 @@ a.article-title:hover {
 .article-footer {
   font-size: 0.85em;
   line-height: 1.6em;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #cec9b9;
   padding-top: 1.6em;
   margin: 0 20px 20px;
 }
@@ -710,7 +708,7 @@ a.article-title:hover {
   text-decoration: none;
 }
 .article-footer a:hover {
-  color: #555;
+  color: #242424;
 }
 .article-tag-list-item {
   float: left;
@@ -762,7 +760,7 @@ a.article-title:hover {
     margin-left: -4px;
     content: "";
     border-radius: 50%;
-    background: #ddd;
+    background: #cec9b9;
     -webkit-box-shadow: 0 1px 2px #fff;
     box-shadow: 0 1px 2px #fff;
   }
@@ -779,7 +777,7 @@ a.article-title:hover {
   display: block;
 }
 .article-nav-link-wrap:hover {
-  color: #555;
+  color: #242424;
 }
 @media screen and (min-width: 768px) {
   .article-nav-link-wrap {
@@ -804,7 +802,7 @@ a.article-title:hover {
 .article-nav-caption {
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #ddd;
+  color: #cec9b9;
   line-height: 1em;
   font-weight: bold;
 }
@@ -836,17 +834,17 @@ a.article-title:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font: 14px 'Special Elite';
   padding: 0 15px;
-  color: #555;
+  color: #242424;
   outline: none;
-  border: 1px solid #ddd;
+  border: 1px solid #cec9b9;
   border-radius: 3px 3px 0 0;
   height: 36px;
   line-height: 36px;
 }
 .article-share-links {
-  background: #eee;
+  background: #f8f2e3;
 }
 .article-share-links:before,
 .article-share-links:after {
@@ -946,7 +944,7 @@ a.article-title:hover {
   -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #cec9b9;
   border-radius: 3px;
   margin: 50px 0;
 }
@@ -999,7 +997,7 @@ a.article-title:hover {
 .archive-article-title {
   text-decoration: none;
   font-weight: bold;
-  color: #555;
+  color: #242424;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   -ms-transition: color 0.2s;
@@ -1025,7 +1023,7 @@ a.article-title:hover {
   background: #fff;
   -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
-  border: 1px solid #ddd;
+  border: 1px solid #cec9b9;
   border-radius: 3px;
   text-align: center;
   color: #999;
@@ -1068,16 +1066,16 @@ a.article-title:hover {
   }
 }
 #page-nav .current {
-  color: #555;
+  color: #242424;
   font-weight: bold;
 }
 #page-nav .space {
-  color: #ddd;
+  color: #cec9b9;
 }
 #footer {
   background: #262a30;
   padding: 50px 0;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #cec9b9;
   color: #999;
 }
 #footer a {
@@ -1097,7 +1095,7 @@ a.article-title:hover {
   margin: 0 -20px;
   padding: 15px 20px;
   border-style: solid;
-  border-color: #ddd;
+  border-color: #cec9b9;
   border-width: 1px 0;
   overflow: auto;
   color: #ccc;
@@ -1113,7 +1111,7 @@ a.article-title:hover {
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
 }
 .article-entry code {
-  background: #eee;
+  background: #f8f2e3;
   text-shadow: 0 1px #fff;
   padding: 0 0.3em;
 }
@@ -1165,7 +1163,7 @@ a.article-title:hover {
 .article-entry .gist {
   margin: 0 -20px;
   border-style: solid;
-  border-color: #ddd;
+  border-color: #cec9b9;
   border-width: 1px 0;
   background: #2d2d2d;
   padding: 15px 20px 15px 0;
@@ -1195,7 +1193,7 @@ a.article-title:hover {
 .article-entry .gist .gist-file .gist-meta {
   background: #2d2d2d;
   color: #999;
-  font: 0.85em -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font: 0.85em 'Special Elite';
   text-shadow: 0 0;
   padding: 0;
   margin-top: 1em;
