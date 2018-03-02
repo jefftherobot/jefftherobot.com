@@ -1,20 +1,14 @@
 {
-	"poems": [
-		{
-			"id": 1,
-			"text": "test poem 1"
-		},
-		{
-			"id": 2,
-			"text": "test poem 2"
-		},
-		{
-			"id": 3,
-			"text": "test poem 3"
-		},
-		{
-			"id": 4,
-			"text": "test poem 4"
-		}
-	]
+  "best-part-day": {
+    "content": "Let me tell you\nwhat the best \npart of my day is,\nI come home from work\nand I come home to you",
+    "basename": "best-part-day"
+  },
+  "destroy": {
+    "content": "I had to destroy it, \nbreak it down, \nand take it apart,\nbefore I could understand\nwhat love is",
+    "basename": "destroy"
+  },
+  "understand": {
+    "content": "I don't understand.\nI have to destroy this\nand see how it works.",
+    "basename": "understand"
+  }
 }

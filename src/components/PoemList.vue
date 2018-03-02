@@ -4,7 +4,7 @@
 </template>
 
 <script>
-	import PoemData from '@data/output.json';
+	import PoemData from '@data/poems.json';
 	import PoemListItem from './PoemListItem.vue'
 
 	export default {
