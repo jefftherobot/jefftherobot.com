@@ -44,7 +44,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production npm run m2j && webpack --progress --hide-modules && npm run copy",
     "m2j": "m2j -c -p -w 0 -o ./data/poems.json ./content/*.md",
-    "copy": "cp index.html dist/ && mkdir dist/dist && mv dist/build.js dist/dist/",
-    "gh-pages": "github-pages -r jefftherobot/jefftherobot.com ./dist"
+    "copy": "cp index.html public/",
+    "gh-pages": "github-pages -r jefftherobot/jefftherobot.com ./public"
   }
 }
