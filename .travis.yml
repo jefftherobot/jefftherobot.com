@@ -4,5 +4,7 @@ node_js:
   - "node"
 install:
   - npm install
+script:
+  - npm build
 after_success: 
   - npm run gh-pages
