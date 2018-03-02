@@ -7,6 +7,10 @@
     "content": "I had to destroy it, \nbreak it down, \nand take it apart,\nbefore I could understand\nwhat love is",
     "basename": "destroy"
   },
+  "fuck": {
+    "content": "what the fuck has happened",
+    "basename": "fuck"
+  },
   "understand": {
     "content": "I don't understand.\nI have to destroy this\nand see how it works.",
     "basename": "understand"
