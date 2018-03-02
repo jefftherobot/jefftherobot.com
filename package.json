@@ -29,7 +29,6 @@
     "cross-env": "^5.1.3",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.4",
-    "gh-pages": "^1.1.0",
     "github-pages": "^3.0.2",
     "markdown-to-json": "^0.5.1",
     "postcss-cssnext": "^3.1.0",
@@ -46,6 +45,6 @@
     "build": "cross-env NODE_ENV=production npm run m2j && webpack --progress --hide-modules && npm run copy",
     "m2j": "m2j -c -p -w 0 -o ./data/poems.json ./content/*.md",
     "copy": "cp index.html public/",
-    "gh-pages": "gh-pages -d public -b poetry"
+    "gh-pages": "github-pages -r jefftherobot/jefftherobot.com ./public"
   }
 }
