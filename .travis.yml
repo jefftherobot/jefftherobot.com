@@ -1,9 +1,0 @@
-sudo: required
-language: node_js
-node_js:
-  - "node"
-install:
-  - npm install
-script:
-  - hexo generate
-  - hexo deploy
